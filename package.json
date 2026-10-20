@@ -1,0 +1,13 @@
+{
+  "name": "offlinemock",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend run test",
+    "validate-content": "python3 content/scripts/validate_packs.py",
+    "backend:test": "cd backend && python3 -m pytest",
+    "backend:dev": "cd backend && python3 -m uvicorn app.main:app --reload"
+  }
+}
